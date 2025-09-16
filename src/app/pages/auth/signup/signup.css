@@ -1,0 +1,452 @@
+/* Container principal */
+.signup-container {
+  min-height: 100vh;
+  background-color: #0f1419;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Card contenedor del formulario */
+.signup-card {
+  width: 100%;
+  max-width: 460px;
+  color: #fff;
+}
+
+/* ==========================================
+   ICONO PRINCIPAL
+   ========================================== */
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.card-icon {
+  width: 100px;
+  height: 100px;
+  background-color: #1a2332;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f4d58d;
+  transition: all 0.3s ease;
+}
+
+.card-icon i {
+  font-size: 2.5rem;
+  transition: transform 0.3s ease;
+}
+
+.card-icon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(244, 213, 141, 0.2);
+}
+
+.card-icon:hover i {
+  transform: scale(1.05);
+}
+
+/* ==========================================
+   TÍTULO Y SUBTÍTULO
+   ========================================== */
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #fff;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #8b92a7;
+  margin-bottom: 40px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ==========================================
+   FORMULARIO
+   ========================================== */
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 10px;
+  color: #8b92a7;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+/* ==========================================
+   INPUT CONTAINER (ESTRUCTURA CORREGIDA)
+   ========================================== */
+
+.input-container {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+/* ==========================================
+   INPUTS DEL FORMULARIO
+   ========================================== */
+
+.form-control {
+  width: 100%;
+  padding: 15px 50px 15px 50px;
+  background-color: #1a2332;
+  border: 1px solid #2a3441;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #4a90e2;
+  background-color: #1f2937;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.form-control::placeholder {
+  color: #5a6273;
+  opacity: 1;
+}
+
+.form-control:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ==========================================
+   ICONOS OVERLAY (POSICIÓN ABSOLUTA)
+   ========================================== */
+
+.input-icon-overlay {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #8b92a7;
+  pointer-events: none;
+  font-size: 1.25rem;
+  z-index: 5;
+  transition: color 0.3s ease;
+}
+
+/* Cambiar color del icono cuando el input tiene focus */
+.input-container:focus-within .input-icon-overlay {
+  color: #4a90e2;
+}
+
+/* ==========================================
+   BOTÓN TOGGLE PASSWORD
+   ========================================== */
+
+.btn-toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #8b92a7;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.btn-toggle-password i {
+  font-size: 1.25rem;
+}
+
+.btn-toggle-password:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.btn-toggle-password:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.3);
+}
+
+.btn-toggle-password:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+/* ==========================================
+   AUTOCOMPLETADO DEL NAVEGADOR
+   ========================================== */
+
+.form-control:-webkit-autofill,
+.form-control:-webkit-autofill:hover,
+.form-control:-webkit-autofill:focus,
+.form-control:-webkit-autofill:active {
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0px 1000px #1a2332 inset;
+  box-shadow: 0 0 0px 1000px #1a2332 inset;
+  transition: background-color 5000s ease-in-out 0s;
+  border-radius: 8px;
+}
+
+/* Firefox autofill */
+.form-control:-moz-autofill,
+.form-control:-moz-autofill:hover,
+.form-control:-moz-autofill:focus {
+  background-color: #1a2332 !important;
+  color: #fff !important;
+  border-radius: 8px;
+}
+
+/* ==========================================
+   BOTÓN PRINCIPAL
+   ========================================== */
+
+.btn-primary {
+  width: 100%;
+  padding: 15px;
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  text-transform: none;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #357abd;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-primary:disabled {
+  background-color: #3a5a7a;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.btn-primary:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.3);
+}
+
+/* ==========================================
+   PIE DE PÁGINA
+   ========================================== */
+
+.footer-text {
+  text-align: center;
+  margin-top: 25px;
+  color: #8b92a7;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.link {
+  color: #4a90e2;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.link:hover {
+  color: #357abd;
+  text-decoration: underline;
+}
+
+.link:focus {
+  outline: 2px solid #4a90e2;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ==========================================
+   ESTADOS DE VALIDACIÓN (ANGULAR FORMS)
+   ========================================== */
+
+/* Input inválido */
+.form-control.ng-invalid.ng-touched {
+  border-color: #e74c3c;
+  background-color: #2a1a1a;
+}
+
+.form-control.ng-invalid.ng-touched:focus {
+  border-color: #e74c3c;
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+}
+
+/* Input válido */
+.form-control.ng-valid.ng-touched {
+  border-color: #2ecc71;
+}
+
+.form-control.ng-valid.ng-touched:focus {
+  border-color: #2ecc71;
+  box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.1);
+}
+
+/* Cambiar color del icono según validación */
+.form-control.ng-invalid.ng-touched ~ .input-icon-overlay {
+  color: #e74c3c;
+}
+
+.form-control.ng-valid.ng-touched ~ .input-icon-overlay {
+  color: #2ecc71;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .signup-container {
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+/* Móviles */
+@media (max-width: 576px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+    margin-bottom: 30px;
+  }
+
+  .signup-card {
+    padding: 0 5px;
+  }
+
+  .form-control {
+    font-size: 16px; /* Evita zoom automático en iOS */
+    padding: 14px 45px 14px 45px;
+  }
+
+  .card-icon {
+    width: 90px;
+    height: 90px;
+  }
+
+  .card-icon i {
+    font-size: 2.2rem;
+  }
+
+  .input-icon-overlay {
+    font-size: 1.1rem;
+    left: 12px;
+  }
+
+  .btn-toggle-password {
+    right: 12px;
+  }
+
+  .btn-toggle-password i {
+    font-size: 1.1rem;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 380px) {
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .card-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .card-icon i {
+    font-size: 1.9rem;
+  }
+
+  .form-control {
+    padding: 13px 42px 13px 42px;
+  }
+}
+
+/* ==========================================
+   FOCUS VISIBLE (NAVEGACIÓN POR TECLADO)
+   ========================================== */
+
+*:focus-visible {
+  outline: 2px solid #4a90e2;
+  outline-offset: 2px;
+}
+
+.form-control:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.3);
+}
+
+/* ==========================================
+   LOADING STATE (OPCIONAL)
+   ========================================== */
+
+.btn-primary.loading {
+  position: relative;
+  color: transparent;
+}
+
+.btn-primary.loading::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  border: 2px solid #fff;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
