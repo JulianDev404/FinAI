@@ -1,0 +1,110 @@
+<div class="signup-container">
+  <div class="signup-card">
+    <!-- Icon -->
+    <div class="icon-container">
+      <div class="card-icon">
+        <i class="bi bi-credit-card"></i>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <h1 class="title">Crear cuenta</h1>
+    <p class="subtitle">Mejora tus el manejo de tus finanzas con nosotros</p>
+
+    <!-- Form -->
+    <form (ngSubmit)="onSubmit()" #signupForm="ngForm">
+      <!-- Name Input -->
+      <div class="form-group">
+        <label class="form-label">Nombre</label>
+        <div class="input-container">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="John Doe"
+            [(ngModel)]="formData.name"
+            name="name"
+            required
+          />
+          <i class="bi bi-card-text input-icon-overlay"></i>
+        </div>
+      </div>
+
+      <!-- Email Input -->
+      <div class="form-group">
+        <label class="form-label">Correo electronico</label>
+        <div class="input-container">
+          <input
+            type="email"
+            class="form-control"
+            placeholder="admin@example.com"
+            [(ngModel)]="formData.email"
+            name="email"
+            required
+            email
+          />
+          <i class="bi bi-envelope input-icon-overlay"></i>
+        </div>
+      </div>
+
+      <!-- Password Input -->
+      <div class="form-group">
+        <label class="form-label">Contraseña</label>
+        <div class="input-container">
+          <input
+            [type]="showPassword ? 'text' : 'password'"
+            class="form-control"
+            placeholder="**************"
+            [(ngModel)]="formData.password"
+            name="password"
+            required
+            minlength="6"
+          />
+          <i class="bi bi-lock input-icon-overlay"></i>
+          <button
+            type="button"
+            class="btn-toggle-password"
+            (click)="togglePasswordVisibility()"
+            tabindex="-1"
+          >
+            <i [class]="showPassword ? 'bi bi-eye-slash' : 'bi bi-eye'"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Confirm Password Input -->
+      <div class="form-group">
+        <label class="form-label">Confirmar Contraseña</label>
+        <div class="input-container">
+          <input
+            [type]="showConfirmPassword ? 'text' : 'password'"
+            class="form-control"
+            placeholder="**************"
+            [(ngModel)]="formData.confirmPassword"
+            name="confirmPassword"
+            required
+            minlength="6"
+          />
+          <i class="bi bi-lock-fill input-icon-overlay"></i>
+          <button
+            type="button"
+            class="btn-toggle-password"
+            (click)="toggleConfirmPasswordVisibility()"
+            tabindex="-1"
+          >
+            <i [class]="showConfirmPassword ? 'bi bi-eye-slash' : 'bi bi-eye'"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn-primary" [disabled]="!signupForm.form.valid">
+        Crear cuenta
+      </button>
+    </form>
+
+    <!-- Footer -->
+    <div class="footer-text">
+      ¿Ya tienes una cuenta? <a routerLink="/login" class="link">Inicia Sesión</a>
+    </div>
+  </div>
+</div>
